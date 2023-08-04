@@ -46,7 +46,7 @@ class WordGuesserGame
       @guesses = new_guess
       @guessed_letters << new_guess
     elsif !@word.include?(new_guess) && !@guessed_wrong.include?(new_guess)
-      @wrong_guesses = new_guess
+      @wrong_guesses += new_guess
       @guessed_wrong << new_guess
     else 
       false
